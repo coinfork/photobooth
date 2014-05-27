@@ -1,0 +1,18 @@
+{
+    "name": "node-eyefi"
+  , "version": "0.0.1"
+  , "private": false
+  , "dependencies": {
+      "express": "2.5.4"
+    , "jade": ">= 0.0.1"
+    , "MD5": ">= 0.0.0"
+    , "xml2js": ">= 0.0.1"
+    , "tar": ">= 0.0.1"
+    , "ejs": ">= 0.0.1"
+    , "formidable": ">= 0.0.1"
+    , "progress-bar": ">= 0.0.1"
+    , "devnull": ">= 0.0.1"
+    , "multiparter": ">= 0.0.1"
+    , "mime": ">= 0.0.1"
+  }
+}
