@@ -1,0 +1,29 @@
+input#email {
+	font-size: 24px;
+	line-height: 48px;
+	height: 48px;
+}
+
+.previews {
+	width: 100%;
+	text-align: center;
+}
+.image-preview {
+	min-height: 100px;
+	height: auto;
+	width: 43%;
+	display: inline-block;
+	background: darkgrey;
+	text-align: center;
+}
+.image-preview.left {
+	margin-right: 40px;
+}
+.image-preview img {
+	height: auto;
+	width: 100%;
+}
+
+label.dontemail {
+	font-weight: normal;
+}
