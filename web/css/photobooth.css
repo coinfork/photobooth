@@ -11,7 +11,7 @@ input#email {
 .image-preview {
 	min-height: 100px;
 	height: auto;
-	width: 43%;
+	width: 42%;
 	display: inline-block;
 	background: darkgrey;
 	text-align: center;
@@ -26,4 +26,6 @@ input#email {
 
 label.dontemail {
 	font-weight: normal;
+	float: right;
+	color: darkgrey;
 }

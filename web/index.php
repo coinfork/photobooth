@@ -23,7 +23,9 @@
 		<div class="image-preview left">
 			<img src="">
 		</div>
-		<div class="image-preview right"></div>
+		<div class="image-preview right">
+			<img src="">
+		</div>
     </div>
 </div>
 
@@ -33,14 +35,14 @@
         <div class="col-md-12">
             <h2>Please enter your email address</h2>
             <p>Your UV image will be emailed to you in the next few minutes.</p>
-            <form role="form">
+            <form>
                 <div class="form-group">
                     <input type="email" class="form-control" id="email" placeholder="Enter email address">
                 </div>
                 <p>
-					<input class="btn btn-primary btn-lg" role="button" type="submit" value="Create My UV Photo &raquo;">
+					<input class="btn btn-primary btn-lg" type="submit" value="Create My UV Photo &raquo;">
 					<label for="dontemail" class="dontemail">
-						I don't want Lifespan BC to email me
+						I don't want to be emailed
 						<input type="checkbox" id="dontemail" name="dontemail">
 					</label>
 				</p>
