@@ -1,7 +1,13 @@
 <?php
 
-$files = scandir('../node-eyefi/pics', SCANDIR_SORT_DESCENDING);
+$files = scandir('pics', SCANDIR_SORT_DESCENDING);
 $newest_file = $files[0];
+foreach($files as $file) {
+	if(strpos($file, '.jpg') == strlen($file)-4) {
+		$newest_file = $file;
+	}
+}
 
-header('Content-Type: image/jpeg');
-echo(file_get_contents($newest_file));
+die(json_encode(array(
+	'uv' => $newest_file
+)));
