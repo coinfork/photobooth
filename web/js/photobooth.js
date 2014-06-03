@@ -15,4 +15,18 @@ $(document).ready(function(){
 			}
 		}, 'json');
 	}, 2000);
+
+	$("#emailform").submit(function(e){
+		var email = $.trim($("#email").val());
+		var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
+		if(!email.length || regex.test(email)) {
+
+		}
+		else {
+			alert('Please enter a valid email address to be sent your photo');
+		}
+		e.preventDefault();
+		return false;
+	});
 });

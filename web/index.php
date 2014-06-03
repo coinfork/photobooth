@@ -33,12 +33,11 @@
     <!-- Example row of columns -->
     <div class="row">
         <div class="col-md-12">
-            <h2>Please enter your email address</h2>
-            <p>Your UV image will be emailed to you in the next few minutes.</p>
-            <form>
+            <form id="emailform">
                 <div class="form-group">
-                    <input type="email" class="form-control" id="email" placeholder="Enter email address" autocomplete="off">
+                    <input type="text" class="form-control" id="email" placeholder="Please enter your email address" autocomplete="off">
                 </div>
+				<p>Your UV image will be emailed to you in the next few minutes.</p>
                 <p>
 					<input class="btn btn-primary btn-lg" id="submit" type="submit" value="Create My UV Photo &raquo;">
 					<label for="dontemail" class="dontemail">
