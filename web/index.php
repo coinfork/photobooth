@@ -37,12 +37,12 @@
             <p>Your UV image will be emailed to you in the next few minutes.</p>
             <form>
                 <div class="form-group">
-                    <input type="email" class="form-control" id="email" placeholder="Enter email address">
+                    <input type="email" class="form-control" id="email" placeholder="Enter email address" autocomplete="off">
                 </div>
                 <p>
-					<input class="btn btn-primary btn-lg" type="submit" value="Create My UV Photo &raquo;">
+					<input class="btn btn-primary btn-lg" id="submit" type="submit" value="Create My UV Photo &raquo;">
 					<label for="dontemail" class="dontemail">
-						I don't want to be emailed
+						Don't send me future updates from Lifespan Society of BC
 						<input type="checkbox" id="dontemail" name="dontemail">
 					</label>
 				</p>

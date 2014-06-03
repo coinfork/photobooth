@@ -1,9 +1,3 @@
-input#email {
-	font-size: 24px;
-	line-height: 48px;
-	height: 48px;
-}
-
 .previews {
 	width: 100%;
 	text-align: center;
@@ -24,8 +18,19 @@ input#email {
 	width: 100%;
 }
 
+input#email {
+	font-size: 26px;
+	line-height: 48px;
+	height: 48px;
+	background: #ddeeff;
+}
+
 label.dontemail {
 	font-weight: normal;
 	float: right;
 	color: darkgrey;
+}
+
+input#submit {
+	font-size: 28px;
 }
