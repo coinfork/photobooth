@@ -18,11 +18,17 @@
 	width: 100%;
 }
 
-input#email {
+input#email,
+input#name {
 	font-size: 32px;
 	line-height: 48px;
 	height: 48px;
+	width: 45%;
 	background: #ddeeff;
+	display: inline-block;
+}
+input#name {
+	margin-right: 22px;
 }
 
 label.dontemail {

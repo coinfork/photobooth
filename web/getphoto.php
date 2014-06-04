@@ -7,6 +7,7 @@ foreach($files as $file) {
 
 	if(stripos($file, '.jpg') == strlen($file)-4) {
 		$newest_file = $file;
+		break;
 	}
 }
 

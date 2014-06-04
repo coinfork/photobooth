@@ -35,7 +35,8 @@
         <div class="col-md-12">
             <form id="emailform">
                 <div class="form-group">
-                    <input type="text" class="form-control" id="email" placeholder="Please enter your email address" autocomplete="off">
+					<input type="text" class="form-control" id="name" placeholder="Full name" autocomplete="off">
+					<input type="text" class="form-control" id="email" placeholder="Email address" autocomplete="off">
                 </div>
 				<p>Your UV image will be emailed to you in the next few minutes.</p>
                 <p>
