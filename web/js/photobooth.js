@@ -1,19 +1,23 @@
 $(document).ready(function(){
-	$("#email").val('');
+	$(document).on('click', '.thumb', function(){
+       $(this).closest('.image-preview').find('img').attr('src', '/preview.php?mode=uv&file=pics/'+$(this).attr('src'));
+       $(this).closest('.image-preview').find('input').value($(this).attr('src'));
+    });
+
+    var lastresponse = null;
+
+    $("#email").val('');
 	$("#dontemail").removeAttr('checked');
 
 	var timer = setInterval(function() {
-		$.get('/getphoto.php?dir=pics', function(response){
-			if($('.image-preview.left img').attr('src') != '/preview.php?mode=uv&file=pics/'+response.uv) {
-				$('.image-preview.left img').attr('src', '/preview.php?mode=uv&file=pics/'+response.uv);
-			}
+
+        $.get('/getphoto.php?dir=pics', function(response){
+            if(lastresponse != response.uv) {
+                makeThumbs(response.uv);
+                lastresponse = response.uv;
+            }
 		}, 'json');
 
-		$.get('/getphoto.php?dir=regular', function(response){
-			if($('.image-preview.right img').attr('src') != '/preview.php?mode=regular&file=pics/'+response.uv) {
-				$('.image-preview.right img').attr('src', '/preview.php?mode=regular&file=pics/'+response.uv);
-			}
-		}, 'json');
 	}, 2000);
 
 	$("#emailform").submit(function(e){
@@ -21,7 +25,10 @@ $(document).ready(function(){
 		var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
 
 		if(!email.length || regex.test(email)) {
+            $("#email").val('');
+            $("#dontemail").removeAttr('checked');
 
+            return true;
 		}
 		else {
 			alert('Please enter a valid email address to be sent your photo');
@@ -30,3 +37,11 @@ $(document).ready(function(){
 		return false;
 	});
 });
+
+function makeThumbs(pics) {
+    var html = '';
+    $(pics).each(function(){
+        html += '<img src="' + '/preview.php?mode=uv&file=pics/' + $(this) + '" class="thumb">';
+    });
+    $('.image-preview.left .thumbs, .image-preview.right .thumbs').html(html);
+}

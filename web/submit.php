@@ -11,18 +11,14 @@ try {
 
 	$email = mysql_real_escape_string($_GET['email']);
 	$name = mysql_real_escape_string($_GET['name']);
+	$photo1 = mysql_real_escape_string($_GET['photo1']);
+	$photo2 = mysql_real_escape_string($_GET['photo2']);
+	$dontemail = !empty($_GET['dontemail']) ? 1 : 0;
 
-	$sql = "INSERT INTO records SET email = '$email', name = '$name', time = " . time() . ";";
+	$sql = "INSERT INTO records SET email = '$email', name = '$name', time = " . time() . ", photo1 = '$photo1', photo2 = '$photo2', dontemail='$dontemail';";
 	$result = mysql_query($sql, $r);
-	die(var_dump($result));
-
-	/*while($row = mysql_fetch_array($result)) {
-		echo $row['email'] . " " . $row['name'];
-		echo "<br>";
-	}*/
 
 	mysql_close();
-
 
 } catch (Exception $e) {
 	die(json_encode(array(

@@ -17,14 +17,18 @@
 </head>
 <body>
 
-
+<form id="emailform">
 <div class="jumbotron">
     <div class="previews">
 		<div class="image-preview left">
 			<img src="">
-		</div>
+            <div class="thumbs"></div>
+            <input type="hidden" name="photo1">
+        </div>
 		<div class="image-preview right">
 			<img src="">
+            <div class="thumbs"></div>
+            <input type="hidden" name="photo2">
 		</div>
     </div>
 </div>
@@ -33,7 +37,6 @@
     <!-- Example row of columns -->
     <div class="row">
         <div class="col-md-12">
-            <form id="emailform">
                 <div class="form-group">
 					<input type="text" class="form-control" id="name" placeholder="Full name" autocomplete="off">
 					<input type="text" class="form-control" id="email" placeholder="Email address" autocomplete="off">
@@ -55,7 +58,7 @@
         <p>Lifespan Society of BC 2014</p>
     </footer>
 </div> <!-- /container -->
-
+</form>
 
 <script src="js/jquery-1.11.1.min.js"></script>
 <script src="js/bootstrap.min.js"></script>

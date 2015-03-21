@@ -40,3 +40,11 @@ label.dontemail {
 input#submit {
 	font-size: 28px;
 }
+
+.thumbs .thumb {
+    cursor: pointer;
+    display: inline-block;
+    width: 32px;
+    height: auto;
+    margin-right: 3px;
+}
